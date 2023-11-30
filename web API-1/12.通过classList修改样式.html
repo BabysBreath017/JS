@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box {
+      width: 200px;
+      height: 200px;
+      color: #333;
+    }
+
+    .active {
+      color: red;
+      background-color: pink;
+
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box ">文字</div>
+  <script>
+    // 通过classList添加　　classList を使用して追加します
+    // 1. 获取元素  要素を取得します
+    const box = document.querySelector('.box')
+    // 2. 修改样式  スタイルを変更します
+    // 2.1 追加类 add() 类名不加点，并且是字符串
+    //クラスの追加 add() クラス名はドットなしで文字列で指定します
+    // box.classList.add('active')
+    // 2.2 删除类  remove() 类名不加点，并且是字符串
+    //クラスの削除 remove() クラス名はドットなしで文字列で指定します
+    // box.classList.remove('box')
+    // 2.3 切换类  toggle()  有还是没有啊， 有就删掉，没有就加上
+    //クラスの切り替え toggle() クラスが存在すれば削除し、存在しなければ追加します
+    box.classList.toggle('active')
+
+  </script>
+</body>
+
+</html>

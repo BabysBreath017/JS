@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- <input type="text" value="电脑"> -->
+  <input type="checkbox" name="" id="">
+  <button>点击</button>
+  <script>
+    // 1 获取元素  要素を取得します
+    // const uname = document.querySelector('input')
+    // 2. 获取值  获取表单里面的值 用的  表单.value
+    //値を取得します。フォーム内の値を取得するには、フォーム.valueを使用します
+    // console.log(uname.value) // 电脑
+    // console.log(uname.innerHTML)  innertHTML 得不到表单的内容 フォームの内容を取得できません
+    // 3. 设置表单的值  フォームの値を設定します
+    // uname.value = '我要买电脑'
+    // console.log(uname.type)
+    // uname.type = 'password'
+
+    // 1. 获取  取得します
+    const ipt = document.querySelector('input')
+    // console.log(ipt.checked)  // false   只接受布尔值  ブール値のみを受け付けます
+    ipt.checked = true
+    // ipt.checked = 'true'  // 会选中，不提倡  有隐式转换  選択されますが、推奨されません。暗黙の型変換があります
+
+    // 1.获取 取得します
+    const button = document.querySelector('button')
+    // console.log(button.disabled)  // 默认false 不禁用  デフォルトはfalseで、無効になっていません
+    button.disabled = true   // 禁用按钮  ボタンを無効にします
+
+  </script>
+</body>
+
+</html>
