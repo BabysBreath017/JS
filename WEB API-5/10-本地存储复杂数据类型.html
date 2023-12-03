@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    const obj = {
+      uname: 'pink老师',
+      age: 18,
+      gender: '女'
+    }
+    // // 存储 复杂数据类型  无法直接使用
+    // 複雑なデータ型を保存するには、直接使用することはできません
+    // localStorage.setItem('obj', obj)  [object object]    
+    // // 取
+    // console.log(localStorage.getItem('obj'))
+
+    // 1.复杂数据类型存储必须转换为 JSON字符串存储
+    // 1. 複雑なデータ型を保存する場合、JSON文字列に変換して保存する必要があります
+    localStorage.setItem('obj', JSON.stringify(obj))
+    // JSON 对象  属性和值有引号，而是引号统一是双引号
+    // JSONオブジェクト：プロパティと値は引用符で囲まれ、引用符はすべてダブルクオートです
+    // {"uname":"pink老师","age":18,"gender":"女"}
+    // 取
+    // console.log(typeof localStorage.getItem('obj'))
+    // 2. 把JSON字符串转换为 对象
+    // 2. JSON文字列をオブジェクトに変換する
+    const str = localStorage.getItem('obj') // {"uname":"pink老师","age":18,"gender":"女"}
+    console.log(JSON.parse(str))
+  </script>
+</body>
+
+</html>
